@@ -20,21 +20,21 @@
                         <ol class="carousel-indicators">
 
                             @for (int i = 0; i < progression.ImagePaths.Count(); ++i)
-{
-    string itemClass;
+                            {
+                                string itemClass;
 
-    if (i == 0)
-    {
-        itemClass = "active";
-    }
-    else
-    {
-        itemClass = "";
-    }
+                                if (i == 0)
+                                {
+                                    itemClass = "active";
+                                }
+                                else
+                                {
+                                    itemClass = "";
+                                }
 
-    <li data-target="#@progression.Name" data-slide-to="@i" class="@itemClass"></li>
+                                <li data-target="#@progression.Name" data-slide-to="@i" class="@itemClass"></li>
 
-}
+                            }
 
                         </ol>
 

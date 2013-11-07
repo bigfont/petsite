@@ -21,11 +21,11 @@ namespace mvcWebApp.Controllers
             windowsDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, windowsDir);
 
             list = new List<Thumbnail>();
-            foreach (string dir in Directory.EnumerateFiles(windowsDir))
+            foreach (string file in Directory.EnumerateFiles(windowsDir))
             {
                 t = new Thumbnail();
-                t.Name = "test";
-                t.ImagePath = dir.Remove(0, HostingEnvironment.ApplicationPhysicalPath.Length).Replace("\\", "/");
+                t.Name = Path.GetFileNameWithoutExtension(file);
+                t.ImagePath = file.Remove(0, HostingEnvironment.ApplicationPhysicalPath.Length).Replace("\\", "/");
                 list.Add(t);
 
             }
@@ -46,7 +46,7 @@ namespace mvcWebApp.Controllers
             foreach (string dir in Directory.EnumerateDirectories(windowsDir))
             {
                 p = new Progression();
-                p.Name = "test";
+                p.Name = "TODO" + dir.Substring(dir.Length - 1, 1);
                 p.ImagePaths = Directory.EnumerateFiles(dir).Select(path => path.Remove(0, HostingEnvironment.ApplicationPhysicalPath.Length).Replace("\\", "/")).ToArray();
                 list.Add(p);
 
