@@ -1,20 +1,14 @@
 ﻿
 html, body {
-
-    background-color:black;
-    color:white;
-
+    background-color: black;
+    color: white;
+    font-family: Arial;
 }
 
 h1 {
-
-    border-bottom:solid thin white;
-
-
+    border-bottom: solid thin white;
 }
 
 address a::after {
-
-    content:attr(href);
-
+    content: attr(href);
 }
