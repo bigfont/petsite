@@ -1,0 +1,15 @@
+﻿@model mvcWebApp.Models.Gallery
+
+<div class="container">
+    
+    <section>
+
+    <h1>Gallery</h1>
+
+        @Html.Partial("_Progression", Model.Progressions)
+
+        @Html.Partial("_Thumbnails", Model.Thumbnails)
+
+    </section>
+
+</div>
