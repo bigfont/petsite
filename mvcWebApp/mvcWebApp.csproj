@@ -143,31 +143,31 @@
     <Content Include="Images\Progressions\3\progression-3-1.jpg" />
     <Content Include="Images\Progressions\3\progression-3-2.jpg" />
     <Content Include="Images\Progressions\3\progression-3-3.jpg" />
-    <Content Include="Images\Thumbnails\1 - Copy.jpg" />
     <Content Include="Images\Thumbnails\1.jpg" />
-    <Content Include="Images\Thumbnails\10 - Copy.jpg" />
     <Content Include="Images\Thumbnails\10.jpg" />
-    <Content Include="Images\Thumbnails\11 - Copy.jpg" />
     <Content Include="Images\Thumbnails\11.jpg" />
-    <Content Include="Images\Thumbnails\12 - Copy.jpg" />
     <Content Include="Images\Thumbnails\12.jpg" />
-    <Content Include="Images\Thumbnails\13 - Copy.jpg" />
     <Content Include="Images\Thumbnails\13.jpg" />
-    <Content Include="Images\Thumbnails\2 - Copy.jpg" />
+    <Content Include="Images\Thumbnails\14.jpg" />
+    <Content Include="Images\Thumbnails\15.jpg" />
+    <Content Include="Images\Thumbnails\16.jpg" />
+    <Content Include="Images\Thumbnails\17.jpg" />
+    <Content Include="Images\Thumbnails\18.jpg" />
+    <Content Include="Images\Thumbnails\19.jpg" />
     <Content Include="Images\Thumbnails\2.jpg" />
-    <Content Include="Images\Thumbnails\3 - Copy.jpg" />
+    <Content Include="Images\Thumbnails\20.jpg" />
+    <Content Include="Images\Thumbnails\21.jpg" />
+    <Content Include="Images\Thumbnails\22.jpg" />
+    <Content Include="Images\Thumbnails\23.jpg" />
+    <Content Include="Images\Thumbnails\24.jpg" />
+    <Content Include="Images\Thumbnails\25.jpg" />
+    <Content Include="Images\Thumbnails\26.jpg" />
     <Content Include="Images\Thumbnails\3.jpg" />
-    <Content Include="Images\Thumbnails\4 - Copy.jpg" />
     <Content Include="Images\Thumbnails\4.jpg" />
-    <Content Include="Images\Thumbnails\5 - Copy.jpg" />
     <Content Include="Images\Thumbnails\5.jpg" />
-    <Content Include="Images\Thumbnails\6 - Copy.jpg" />
     <Content Include="Images\Thumbnails\6.jpg" />
-    <Content Include="Images\Thumbnails\7 - Copy.jpg" />
     <Content Include="Images\Thumbnails\7.jpg" />
-    <Content Include="Images\Thumbnails\8 - Copy.jpg" />
     <Content Include="Images\Thumbnails\8.jpg" />
-    <Content Include="Images\Thumbnails\9 - Copy.jpg" />
     <Content Include="Images\Thumbnails\9.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -239,6 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Gallery.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Address.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
