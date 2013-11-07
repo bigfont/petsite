@@ -1,4 +1,18 @@
 ﻿
+html, body {
+
+    background-color:black;
+    color:white;
+
+}
+
+h1 {
+
+    border-bottom:solid thin white;
+
+
+}
+
 address a::after {
 
     content:attr(href);
