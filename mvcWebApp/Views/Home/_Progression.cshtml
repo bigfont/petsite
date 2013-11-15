@@ -7,82 +7,96 @@
 
     <div class="row">
 
-        <div class="col-lg-10 col-lg-offset-1">
+        @{
 
-            <div class="row">
+            int index = 0;
+            string cssClass = String.Empty;
 
-                @foreach (mvcWebApp.Models.Progression progression in @Model)
-                {
+        }
 
-                    <div class="col-lg-4">
+        @foreach (mvcWebApp.Models.Progression progression in @Model)
+        {
+            
+            if(index == 0)
+            {
+                cssClass = "pull-left";
+            }
+            else if (index == @Model.Count() - 1)
+            {
+                cssClass = "pull-right";
+            }
+            else
+            {
+                cssClass = "center-block";
+            }
+            ++index;
 
-                        <div id="@progression.Name" class="carousel slide" data-ride="carousel">
+            <div class="col-lg-4">
 
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
+                <div id="@progression.Name" class="carousel slide @cssClass" data-ride="carousel">
 
-                                @for (int i = 0; i < progression.ImagePaths.Count(); ++i)
-                                {
-                                    string itemClass;
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
 
-                                    if (i == 0)
-                                    {
-                                        itemClass = "active";
-                                    }
-                                    else
-                                    {
-                                        itemClass = "";
-                                    }
+                        @for (int i = 0; i < progression.ImagePaths.Count(); ++i)
+                        {
+                            string itemClass;
 
-                                    <li data-target="#@progression.Name" data-slide-to="@i" class="@itemClass"></li>
+                            if (i == 0)
+                            {
+                                itemClass = "active";
+                            }
+                            else
+                            {
+                                itemClass = "";
+                            }
 
-                                }
+                            <li data-target="#@progression.Name" data-slide-to="@i" class="@itemClass"></li>
 
-                            </ol>
+                        }
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
+                    </ol>
 
-                                @for (int i = 0; i < progression.ImagePaths.Count(); ++i)
-                                {
-                                    string itemClass;
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
 
-                                    if (i == 0)
-                                    {
-                                        itemClass = "item active";
-                                    }
-                                    else
-                                    {
-                                        itemClass = "item";
-                                    }
+                        @for (int i = 0; i < progression.ImagePaths.Count(); ++i)
+                        {
+                            string itemClass;
 
-                                    <div class="@itemClass">
-                                        <img src="@Url.Content(progression.ImagePaths[i])" alt="" />
-                                        <div class="carousel-caption">
-                                            Caption here.
-                                        </div>
-                                    </div>
+                            if (i == 0)
+                            {
+                                itemClass = "item active";
+                            }
+                            else
+                            {
+                                itemClass = "item";
+                            }
 
-                                }
-
+                            <div class="@itemClass">
+                                <img src="@Url.Content(progression.ImagePaths[i])" alt="" />
+                                <div class="carousel-caption">
+                                    Caption here.
+                                </div>
                             </div>
 
-                            <!-- Controls -->
-                            <a class="left carousel-control" href="#@progression.Name" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#@progression.Name" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-
-                        </div>
+                        }
 
                     </div>
-                }
-            </div>
-        </div>
-    </div>
 
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#@progression.Name" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#@progression.Name" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+
+
+        }
+    </div>
 
 
 </section>
