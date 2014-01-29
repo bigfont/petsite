@@ -44,6 +44,7 @@
 
                         @for (var i = 0; i < imageCount; ++i)
                         {
+                            // start the carousel with the final image
                             string itemClass = i == (imageCount - 1) ? "active" : "";
 
                             <li data-target="#@progression.Name" data-slide-to="@i" class="@itemClass"></li>
