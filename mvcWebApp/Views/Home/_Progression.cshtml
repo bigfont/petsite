@@ -3,7 +3,9 @@
 
 <section>
 
-    <h2>Progressions</h2>
+    <header class="page-header">
+        <h1>Progressions</h1>
+    </header>
 
     <div class="row">
 
@@ -16,19 +18,7 @@
 
         @foreach (mvcWebApp.Models.Progression progression in @Model)
         {
-            
-            if(index == 0)
-            {
-                cssClass = "pull-left";
-            }
-            else if (index == @Model.Count() - 1)
-            {
-                cssClass = "pull-right";
-            }
-            else
-            {
-                cssClass = "center-block";
-            }
+            cssClass = "center-block";
             ++index;
 
             <div class="col-lg-4">
@@ -39,13 +29,14 @@
                     <ol class="carousel-indicators">
 
                         @{
-                            var imageCount = progression.ImagePaths.Length;
+            var imageCount = progression.ImagePaths.Length;
+            var activeImageIndex = imageCount - 1;
                         }
 
                         @for (var i = 0; i < imageCount; ++i)
                         {
                             // start the carousel with the final image
-                            string itemClass = i == (imageCount - 1) ? "active" : "";
+                            var itemClass = i == activeImageIndex ? "active" : "";
 
                             <li data-target="#@progression.Name" data-slide-to="@i" class="@itemClass"></li>
 
@@ -58,16 +49,7 @@
 
                         @for (int i = 0; i < progression.ImagePaths.Count(); ++i)
                         {
-                            string itemClass;
-
-                            if (i == 0)
-                            {
-                                itemClass = "item active";
-                            }
-                            else
-                            {
-                                itemClass = "item";
-                            }
+                            var itemClass = i == activeImageIndex ? "item active" : "item";
 
                             <div class="@itemClass">
                                 <img src="@Url.Content(progression.ImagePaths[i])" alt="" />
@@ -96,3 +78,4 @@
 
 
 </section>
+

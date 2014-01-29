@@ -5,10 +5,6 @@ html, body {
     font-family: Arial;
 }
 
-h1 {
-    border-bottom: solid thin white;
-}
-
 address a::after {
     content: attr(href);
 }
