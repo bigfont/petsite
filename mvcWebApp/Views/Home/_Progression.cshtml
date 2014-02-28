@@ -11,26 +11,24 @@
 
         @{
 
-            int index = 0;
-            string cssClass = String.Empty;
+            int index = 0;            
 
         }
 
         @foreach (mvcWebApp.Models.Progression progression in @Model)
         {
-            cssClass = "center-block";
             ++index;
 
             <div class="col-lg-4">
 
-                <div id="@progression.Name" class="carousel slide @cssClass" data-ride="carousel" data-interval="false">
+                <div id="@progression.Name" class="carousel slide" data-ride="carousel" data-interval="false">
 
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
 
                         @{
-            var imageCount = progression.ImagePaths.Length;
-            var activeImageIndex = imageCount - 1;
+                            var imageCount = progression.ImagePaths.Length;
+                            var activeImageIndex = imageCount - 1;
                         }
 
                         @for (var i = 0; i < imageCount; ++i)
@@ -52,7 +50,7 @@
                             var itemClass = i == activeImageIndex ? "item active" : "item";
 
                             <div class="@itemClass">
-                                <img src="@Url.Content(progression.ImagePaths[i])" alt="" />
+                                <img src="@Url.Content(progression.ImagePaths[i])" class="thumbnail" alt="" />
                                 <div class="carousel-caption">
                                     Caption here.
                                 </div>
