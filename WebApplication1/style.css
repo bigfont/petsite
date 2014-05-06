@@ -1,6 +1,4 @@
-﻿
-
-header > div.row > div {
+﻿header > div.row > div {
     padding: 0 15px;
     margin: 20px 0;
 }
@@ -50,5 +48,4 @@ footer {
 
 .carousel-thumbnails img {
     cursor:pointer;
-    border:thin solid silver;
 }
