@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    width: 600px;
+    max-width: 600px;
 }
 
 footer {
@@ -47,3 +47,8 @@ footer {
     #my-carousel.carousel > .carousel-control {
         background-image: none;
     }
+
+.carousel-thumbnails img {
+    cursor:pointer;
+    border:thin solid silver;
+}

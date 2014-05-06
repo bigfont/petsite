@@ -67,7 +67,7 @@
   <ItemGroup>
     <Content Include="carousel\Charlotte.jpg" />
     <Content Include="carousel\Sam.jpg" />
-    <Content Include="carousel\Sam.png" />
+    <Content Include="carousel\Sarah.jpg" />
     <Content Include="carousel\Tucker.jpg" />
     <Content Include="carousel\Weimeriner.jpg" />
     <Content Include="header.png" />
