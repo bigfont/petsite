@@ -65,6 +65,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bio-process.jpg" />
     <Content Include="carousel\Charlotte.jpg" />
     <Content Include="carousel\Sam.jpg" />
     <Content Include="carousel\Sarah.jpg" />
